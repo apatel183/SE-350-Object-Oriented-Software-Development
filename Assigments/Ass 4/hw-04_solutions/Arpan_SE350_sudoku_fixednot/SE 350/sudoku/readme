@@ -1,0 +1,26 @@
+
+public Formula not()     === Code is correct but failing because my output doesn't match the test.
+public int getSize() = Work
+public Formula or(Formula p)  = Work
+public Formula and(Formula p) = work 
+public Iterator<Clause> iterator()= work
+public ImList<Clause> getClauses() = work 
+public Formula addClause(Clause c) = work 
+public Formula(Clause c) = work 
+public Formula(Variable l) = work
+public Formula() = work
+
+
+
+Test Not fails in the jUnit test because of  toString details.
+
+Expected				
+Problem[
+Clause[~c, ~b]
+Clause[~c, ~a]]
+
+
+Actual 
+Problem[
+Clause[~a, ~c]
+Clause[~b, ~c]]

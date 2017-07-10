@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p>package observer.one;<br />import java.util.Observer;<br />import java.util.Observable;<br />import java.lang.Enum;</p>
+<p><br />class Cntr {<br /> int _v;<br /> <br /> void add1(){ _v ++;}<br /> int get(){return _v;}<br />}</p>
+<p>public class Main {<br /> public static void main(String[] argv) {<br /> Int c = new Int();<br /> final Cntr cntr = new Cntr(); <br /> Observer o1 = new Observer(){<br /> public void update(Observable obs, Object o){<br /> cntr.add1();<br /> }<br /> };<br /> c.addObserver(o1);<br /> <br /> final Cntr inccntr = new Cntr(); <br /> final Cntr deccntr = new Cntr(); <br /> Observer o2 = new Observer(){<br /> public void update(Observable obs, Object o){<br /> InvType e = (InvType) o;<br /> switch (e) {<br /> case Inc: inccntr.add1();<br /> case Dec: deccntr.add1();<br /> }<br /> }<br /> };<br /> c.addObserver(o2);<br /> <br /> <br /> <br /> Runnable r1 = new M(c);<br /> Runnable r2 = new N(c);<br /> for (int i=0; i&lt;10000; i++) {<br /> r1.run();<br /> r2.run();<br /> }<br /> <br /> System.out.println(cntr.get());<br /> System.out.println(inccntr.get() - deccntr.get());<br /> }<br />}</p>
+<p>enum InvType {<br /> Inc, Dec;<br />}</p>
+<p>class Int extends Observable {<br /> private int _v;<br /> public void inc() { _v++; setChanged();notifyObservers(InvType.Inc); }<br /> public void dec() { _v--; setChanged();notifyObservers(InvType.Dec);}<br /> <br />}<br />class M implements Runnable {<br /> private Int _c;<br /> public M(Int c) { _c = c; }<br /> public void run() {<br /> _c.inc();<br /> _c.inc();<br /> _c.dec();<br /> }<br />}<br />class N implements Runnable {<br /> private Int _c;<br /> public N(Int c) { _c = c; }<br /> public void run() {<br /> for (int i=0; i&lt;50; i++) {<br /> if (i%3==0) {<br /> _c.dec();<br /> } else {<br /> _c.inc();<br /> }<br /> }<br /> }<br />}</p>
+</body>
+</html>

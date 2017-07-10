@@ -1,0 +1,22 @@
+//Arpan Patel
+
+
+MyLinked.java file info:
+public void delete (int k) {} == WORKS
+public void reverse () {) == WORKS
+public void remove (double item) {} = WORKS
+  
+ALSO CONVERTED THE TEST TO JUNIT SUCCESSFULLY. ALL MY TEST CASES PASSED IT THE CODE.
+
+
+AssertExp.java file info below: 
+public static double minValue(double[] list) { == WORKS
+public static int minPosition(double[] list) { == WORKS
+public static int numUnique(double[] list) { == WORKS
+public static double[] removeDuplicates(double[] list) { == WORKS
+
+
+ALSO CREATED TEST CASES FOR ALL THE METHODS AND THEY ALL PASSED SUCCESSFULLY AND ASSERTION WORKS AS WELL:
+
+
+THIS ASSIGMENT I COMPLETED AND EVERYTHING RUNNING 100%. 

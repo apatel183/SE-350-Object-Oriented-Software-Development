@@ -1,0 +1,47 @@
+
+// sudoku read me file. 
+(i) public Sudoku(int dim) == Work
+(ii)public Sudoku(int dim, int[][] square) = Work
+(III)public static Sudoku fromFile(int dim, String filename) = 
+fromfile = code is correct(i think) but I am not sure where to put file in directory to read it from.
+Because I kept on getting error that file is not in directory. So I assume that I am not using the right path 
+for the file to be open and read using my fromFile method;
+(iv)public static class ParseException extends Exception  = work
+(V)public String toString() = work
+(vi)public Formula getProblem() := work
+      \\ page 32 of lec 13 from MIT notes
+(VII)public Sudoku interpretSolutioN() = work
+      \\ page 33 of lec 13 from MIT notes
+      
+
+
+
+
+
+// this read me for formula files
+public Formula not()     === Code is correct but failing because my output doesn't match the test.
+public int getSize() = Work
+public Formula or(Formula p)  = Work
+public Formula and(Formula p) = work 
+public Iterator<Clause> iterator()= work
+public ImList<Clause> getClauses() = work 
+public Formula addClause(Clause c) = work 
+public Formula(Clause c) = work 
+public Formula(Variable l) = work
+public Formula() = work
+
+
+
+Test Not fails in the jUnit test because of  toString details.
+
+Expected				
+Problem[
+Clause[~c, ~b]
+Clause[~c, ~a]]
+
+
+Actual 
+Problem[
+Clause[~a, ~c]
+Clause[~b, ~c]]
+
